@@ -8,6 +8,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -20,6 +21,8 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 section {
@@ -29,8 +32,6 @@ section {
 @layer components {
   .section-wrap {
     @apply relative py-14 sm:py-16 lg:py-20;
-    content-visibility: auto;
-    contain-intrinsic-size: 1px 760px;
   }
 
   .section-wrap::before {
@@ -73,6 +74,12 @@ section {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (max-width: 768px) {
   html {
     scroll-behavior: auto;
   }
