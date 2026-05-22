@@ -38,10 +38,16 @@ export default function Hero() {
               <Mail size={16} />
               Contact Me
             </a>
-            <button type="button" className="cta-outline">
+            <a
+              href="https://github.com/PrageeDG/portfolio/releases/download/CV/Prageeth_S_Resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className="cta-outline"
+              aria-label="Download CV"
+            >
               <Download size={16} />
               Download CV
-            </button>
+            </a>
           </div>
         </motion.div>
 
