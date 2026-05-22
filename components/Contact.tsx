@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Github, Linkedin, Mail, Phone, SendHorizonal, MessageCircle } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
+import SectionReveal from "@/components/SectionReveal";
 
 export default function Contact() {
   const [sent, setSent] = useState(false);
@@ -11,7 +12,7 @@ export default function Contact() {
   return (
     <section id="contact" className="section-wrap pb-20">
       <h2 className="section-title">Contact</h2>
-      <div className="mt-8 grid gap-6 lg:grid-cols-2">
+      <SectionReveal className="mt-8 grid gap-6 lg:grid-cols-2" delay={0.05}>
         <div className="glass-card p-6">
           <h3 className="text-xl font-semibold text-textWhite">Let&apos;s Work Together</h3>
           <p className="mt-2 text-sm text-mutedText">Open to internships, collaboration, and impactful software projects.</p>
@@ -50,7 +51,7 @@ export default function Contact() {
           </button>
           {sent ? <p className="mt-3 text-sm text-softBlue">Message sent successfully.</p> : null}
         </form>
-      </div>
+      </SectionReveal>
     </section>
   );
 }

@@ -2,6 +2,7 @@
 
 import { Code2, MonitorSmartphone, ServerCog, Database, ShieldCheck, Wrench, Sparkles } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
+import SectionReveal from "@/components/SectionReveal";
 
 const icons = {
   "Programming Languages": Code2,
@@ -19,7 +20,7 @@ export default function Skills() {
       <h2 className="section-title">Skills</h2>
       <p className="section-subtitle">Category-based engineering stack with secure backend, polished UI systems, and practical tooling.</p>
 
-      <div className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+      <SectionReveal className="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3" delay={0.03}>
         {portfolio.skills.map((skill) => {
           const Icon = icons[skill.title as keyof typeof icons] ?? Sparkles;
           return (
@@ -36,7 +37,7 @@ export default function Skills() {
             </article>
           );
         })}
-      </div>
+      </SectionReveal>
     </section>
   );
 }

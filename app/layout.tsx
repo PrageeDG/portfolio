@@ -18,6 +18,11 @@ export const metadata: Metadata = {
       "Modern full-stack portfolio featuring projects, skills, experience, and contact details.",
     type: "website",
   },
+  icons: {
+    icon: "/me.jpeg",
+    shortcut: "/me.jpeg",
+    apple: "/me.jpeg",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

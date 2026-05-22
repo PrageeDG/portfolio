@@ -80,10 +80,6 @@ section {
 }
 
 @media (max-width: 768px) {
-  html {
-    scroll-behavior: auto;
-  }
-
   .glass-card {
     backdrop-filter: none;
     box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.12), 0 8px 18px rgba(2, 6, 23, 0.45);

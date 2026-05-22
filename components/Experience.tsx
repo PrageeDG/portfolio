@@ -2,6 +2,7 @@
 
 import { BriefcaseBusiness, ExternalLink } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
+import SectionReveal from "@/components/SectionReveal";
 
 export default function Experience() {
   return (
@@ -9,7 +10,7 @@ export default function Experience() {
       <h2 className="section-title">Experience</h2>
       <p className="section-subtitle">Timeline of practical development and technical problem-solving experience.</p>
 
-      <div className="relative mt-8 space-y-6 before:absolute before:left-3 before:top-1 before:h-[calc(100%-12px)] before:w-px before:bg-seraBlue/50 sm:before:left-1/2">
+      <SectionReveal className="relative mt-8 space-y-6 before:absolute before:left-3 before:top-1 before:h-[calc(100%-12px)] before:w-px before:bg-seraBlue/50 sm:before:left-1/2" delay={0.05}>
         {portfolio.experience.map((exp, idx) => (
           <article
             key={exp.title + exp.date}
@@ -36,7 +37,7 @@ export default function Experience() {
             ) : null}
           </article>
         ))}
-      </div>
+      </SectionReveal>
     </section>
   );
 }

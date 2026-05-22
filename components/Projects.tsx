@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Github } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
+import SectionReveal from "@/components/SectionReveal";
 
 export default function Projects() {
   return (
@@ -10,7 +11,7 @@ export default function Projects() {
       <h2 className="section-title">Projects</h2>
       <p className="section-subtitle">Production-style projects blending secure systems, UX quality, and domain-specific problem solving.</p>
 
-      <div className="mt-8 grid gap-6 lg:grid-cols-2">
+      <SectionReveal className="mt-8 grid gap-6 lg:grid-cols-2" delay={0.06}>
         {portfolio.projects.map((project) => (
           <article key={project.name} className="glass-card group overflow-hidden p-3 transition duration-200 hover:-translate-y-0.5 hover:shadow-seraGlow">
             <div className="relative overflow-hidden rounded-xl border border-sera">
@@ -47,7 +48,7 @@ export default function Projects() {
             </div>
           </article>
         ))}
-      </div>
+      </SectionReveal>
     </section>
   );
 }

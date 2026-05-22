@@ -2,6 +2,7 @@
 
 import { Layers3, BrainCircuit, Palette } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
+import SectionReveal from "@/components/SectionReveal";
 
 const highlights = [
   { title: "Full-Stack Development", icon: Layers3 },
@@ -13,7 +14,7 @@ export default function About() {
   return (
     <section id="about" className="section-wrap">
       <h2 className="section-title">About</h2>
-      <div className="mt-8 grid gap-6 lg:grid-cols-2">
+      <SectionReveal className="mt-8 grid gap-6 lg:grid-cols-2">
         <article className="glass-card p-6 sm:p-8">
           <p className="text-sm leading-relaxed text-mutedText sm:text-base">{portfolio.about}</p>
         </article>
@@ -30,7 +31,7 @@ export default function About() {
             );
           })}
         </div>
-      </div>
+      </SectionReveal>
     </section>
   );
 }
