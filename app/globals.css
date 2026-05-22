@@ -17,6 +17,9 @@ body {
     radial-gradient(circle at 80% 15%, rgba(34, 211, 238, 0.13), transparent 30%),
     #020617;
   color: #f8fafc;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 section {
@@ -26,6 +29,8 @@ section {
 @layer components {
   .section-wrap {
     @apply relative py-14 sm:py-16 lg:py-20;
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 760px;
   }
 
   .section-wrap::before {
@@ -43,6 +48,7 @@ section {
 
   .glass-card {
     @apply rounded-2xl border border-sera bg-cardBg/70 backdrop-blur-xl shadow-[0_0_0_1px_rgba(59,130,246,0.06),0_18px_40px_rgba(2,6,23,0.6)];
+    will-change: transform;
   }
 
   .chip {
@@ -63,5 +69,11 @@ section {
 
   .input-ui {
     @apply w-full rounded-xl border border-sera bg-darkNavy/80 px-4 py-3 text-sm text-textWhite outline-none transition placeholder:text-mutedText focus:border-seraBlue focus:ring-2 focus:ring-seraBlue/25;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }

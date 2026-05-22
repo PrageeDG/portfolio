@@ -17,12 +17,20 @@ export default function Projects() {
             key={project.name}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: idx * 0.05 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.35, delay: idx * 0.03 }}
             className="glass-card group overflow-hidden p-3 hover:-translate-y-1 hover:shadow-seraGlow"
           >
             <div className="relative overflow-hidden rounded-xl border border-sera">
-              <Image src={project.image} alt={project.name} width={1200} height={720} className="h-48 w-full object-cover transition duration-500 group-hover:scale-105" />
+              <Image
+                src={project.image}
+                alt={project.name}
+                width={1200}
+                height={720}
+                quality={72}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="h-44 w-full object-cover transition duration-300 group-hover:scale-[1.03] sm:h-48"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-darkBg/35 to-transparent" />
             </div>
             <div className="p-3">
