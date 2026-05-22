@@ -16,9 +16,10 @@ export default function About() {
       <h2 className="section-title">About</h2>
       <div className="mt-8 grid gap-6 lg:grid-cols-2">
         <motion.article
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.3 }}
           className="glass-card p-6 sm:p-8"
         >
           <p className="text-sm leading-relaxed text-mutedText sm:text-base">{portfolio.about}</p>
@@ -30,10 +31,10 @@ export default function About() {
             return (
               <motion.article
                 key={item.title}
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: 10 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.08 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.25, delay: idx * 0.03 }}
                 className="glass-card group p-5 transition hover:-translate-y-1 hover:shadow-seraGlow"
               >
                 <Icon size={20} className="text-seraBlue" />
