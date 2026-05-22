@@ -85,7 +85,7 @@ export const portfolio = {
   projects: [
     {
       name: "Smart Campus Operations Hub",
-      image: "/smart campus.png",
+      image: "/optimized/smart-campus.jpg",
       tech: ["React", "Spring Boot", "MySQL", "JWT", "WebSocket"],
       description:
         "A smart campus management platform for managing university resources, facilities, bookings, maintenance tickets, SLA monitoring, real-time notifications, Google OAuth authentication, and AI chatbot support.",
@@ -95,7 +95,7 @@ export const portfolio = {
     },
     {
       name: "ClashGuard - Academic Deadline Collision & Burnout Detection System",
-      image: "/clash gaurd.png",
+      image: "/optimized/clashguard.jpg",
       tech: ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
       description:
         "A MERN-stack academic planning system that detects deadline collisions, calculates workload intensity, predicts burnout risk, displays heatmaps, and sends deadline warnings.",
@@ -125,7 +125,7 @@ export const portfolio = {
     },
     {
       name: "Python Data Science Projects",
-      image: "/python.png",
+      image: "/optimized/python.jpg",
       tech: ["Python", "Scikit-learn", "Matplotlib", "Power BI"],
       description:
         "Data analysis and machine learning projects involving EDA, feature engineering, regression/classification models, dashboards, and visual reports.",
