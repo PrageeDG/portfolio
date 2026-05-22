@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { BriefcaseBusiness, ExternalLink } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 
@@ -12,12 +11,8 @@ export default function Experience() {
 
       <div className="relative mt-8 space-y-6 before:absolute before:left-3 before:top-1 before:h-[calc(100%-12px)] before:w-px before:bg-seraBlue/50 sm:before:left-1/2">
         {portfolio.experience.map((exp, idx) => (
-          <motion.article
+          <article
             key={exp.title + exp.date}
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: idx * 0.08 }}
             className={`relative ml-10 glass-card p-5 sm:ml-0 sm:w-[calc(50%-1rem)] ${idx % 2 === 0 ? "sm:mr-auto" : "sm:ml-auto"}`}
           >
             <span className={`absolute top-6 flex h-6 w-6 items-center justify-center rounded-full border border-sera bg-darkBg ${idx % 2 === 0 ? "-left-8 sm:-right-8 sm:left-auto" : "-left-8"}`}>
@@ -39,7 +34,7 @@ export default function Experience() {
                 <ExternalLink size={14} />
               </a>
             ) : null}
-          </motion.article>
+          </article>
         ))}
       </div>
     </section>
