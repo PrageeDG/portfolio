@@ -1,0 +1,13 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1120"/>
+      <stop offset="100%" stop-color="#083344"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <rect x="100" y="90" width="1000" height="520" rx="26" fill="#020617" stroke="#22d3ee" stroke-opacity="0.35"/>
+  <path d="M170 470C280 380 360 330 470 370C560 405 640 490 760 450C860 416 940 320 1030 260" stroke="#00ffa3" stroke-width="10" stroke-linecap="round"/>
+  <text x="140" y="250" fill="#e2e8f0" font-size="56" font-family="Segoe UI, Arial" font-weight="700">ClashGuard</text>
+  <text x="140" y="304" fill="#67e8f9" font-size="28" font-family="Segoe UI, Arial">Deadline Collision & Burnout Detection</text>
+</svg>

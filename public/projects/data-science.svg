@@ -1,0 +1,13 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <rect x="100" y="90" width="1000" height="520" rx="26" fill="#0b1220" stroke="#22d3ee" stroke-opacity="0.35"/>
+  <polyline points="180,480 320,410 470,430 620,320 760,360 910,250 1030,280" stroke="#00ffa3" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <text x="140" y="250" fill="#e2e8f0" font-size="56" font-family="Segoe UI, Arial" font-weight="700">Python Data Science</text>
+  <text x="140" y="304" fill="#67e8f9" font-size="28" font-family="Segoe UI, Arial">EDA • ML Models • Dashboards</text>
+</svg>

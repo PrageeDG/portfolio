@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Sora", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at 20% 0%, rgba(59, 130, 246, 0.2), transparent 35%),
+    radial-gradient(circle at 80% 15%, rgba(34, 211, 238, 0.13), transparent 30%),
+    #020617;
+  color: #f8fafc;
+}
+
+section {
+  scroll-margin-top: 96px;
+}
+
+@layer components {
+  .section-wrap {
+    @apply relative py-14 sm:py-16 lg:py-20;
+  }
+
+  .section-wrap::before {
+    content: "";
+    @apply absolute -top-2 left-0 h-px w-full bg-gradient-to-r from-transparent via-softBlue/40 to-transparent;
+  }
+
+  .section-title {
+    @apply text-2xl font-semibold tracking-tight text-textWhite sm:text-3xl lg:text-4xl;
+  }
+
+  .section-subtitle {
+    @apply mt-3 max-w-3xl text-sm leading-relaxed text-mutedText sm:text-base;
+  }
+
+  .glass-card {
+    @apply rounded-2xl border border-sera bg-cardBg/70 backdrop-blur-xl shadow-[0_0_0_1px_rgba(59,130,246,0.06),0_18px_40px_rgba(2,6,23,0.6)];
+  }
+
+  .chip {
+    @apply rounded-full border border-sera bg-seraBlue/15 px-3 py-1 text-xs text-softBlue;
+  }
+
+  .cta-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-sera bg-seraBlue px-5 py-2.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-seraGlow;
+  }
+
+  .cta-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-sera bg-darkNavy/70 px-5 py-2.5 text-sm font-medium text-softBlue transition hover:-translate-y-0.5 hover:bg-darkNavy;
+  }
+
+  .cta-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-sera bg-transparent px-5 py-2.5 text-sm font-medium text-softBlue transition hover:-translate-y-0.5 hover:bg-seraBlue/10;
+  }
+
+  .input-ui {
+    @apply w-full rounded-xl border border-sera bg-darkNavy/80 px-4 py-3 text-sm text-textWhite outline-none transition placeholder:text-mutedText focus:border-seraBlue focus:ring-2 focus:ring-seraBlue/25;
+  }
+}
